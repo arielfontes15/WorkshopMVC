@@ -28,7 +28,8 @@ namespace WorkshopMVC
             services.AddControllersWithViews();
 
             services.AddDbContext<WorkshopMVCContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("WorkshopMVCContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("WorkshopMVCContext"), builder =>
+                    builder.MigrationsAssembly("WorkshopMVC")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
