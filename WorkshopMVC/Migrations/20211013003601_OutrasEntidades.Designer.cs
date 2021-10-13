@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WorkshopMVC.Data;
 
 namespace WorkshopMVC.Migrations
 {
     [DbContext(typeof(WorkshopMVCContext))]
-    partial class WorkshopMVCContextModelSnapshot : ModelSnapshot
+    [Migration("20211013003601_OutrasEntidades")]
+    partial class OutrasEntidades
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
