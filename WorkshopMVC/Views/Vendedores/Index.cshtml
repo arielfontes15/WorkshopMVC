@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WorkshopMVC.Models.Departamento>
+﻿@model WorkshopMVC.Models.Vendedor
 
 @{
     ViewData["Title"] = "Index";
@@ -17,8 +17,10 @@
             </th>
         </tr>
     </thead>
-    <tbody >
-           @foreach (var item in Model) {<tr>
+    <tbody>
+        @*@foreach (var item in Model)
+        {
+            <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
@@ -28,6 +30,6 @@
                     <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Deletar</a>
                 </td>
             </tr>
-        }
+        }*@
     </tbody>
 </table>
