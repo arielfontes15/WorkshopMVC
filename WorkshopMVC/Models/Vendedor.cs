@@ -8,7 +8,7 @@ namespace WorkshopMVC.Models
     public class Vendedor
     {
         public int Id { get; set; }
-        [Display(Name = "Nome do Departamento")]
+        [Display(Name = "Nome do Vendedor")]
         [Required(ErrorMessage = "O campo {0} é obrigatorio!")]
         public string Name { get; set; }
         [Display(Name = "Email")]
@@ -19,6 +19,7 @@ namespace WorkshopMVC.Models
         public DateTime DataDeNascimento { get; set; }
         [Display(Name = "Salario base")]
         public double SalarioBase { get; set; }
+        public int DepartamentoId { get; set; }
         public Departamento Departamento { get; set; }
 
         // Relacionamento entre a tabela 1 Recorde de vendas para Muitos (1:N)

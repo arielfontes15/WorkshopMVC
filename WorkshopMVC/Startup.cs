@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WorkshopMVC.Data;
+using WorkshopMVC.Services;
 
 namespace WorkshopMVC
 {
@@ -26,6 +27,8 @@ namespace WorkshopMVC
                     options.UseSqlServer(Configuration.GetConnectionString("WorkshopMVCContext"), builder =>
                     builder.MigrationsAssembly("WorkshopMVC")));
             services.AddScoped<SeedingService>();
+
+            services.AddScoped<Service>(); //Injetando a dependencia do Service
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
